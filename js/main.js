@@ -11,21 +11,19 @@ $(document).ready(function() {
 
     //fuzione x la generazione delle bombe
     function generateBombs() {
-        for (i = 0; i <= 15; i++) {
-            numRandom = Math.floor(Math.random() * 64) + 1;
-            if (numRandom === numRandom) {
-                numRandom = Math.floor(Math.random() * 64) + 1;
+        var selected = [];
+        console.log(length);
+
+        while (selected.length < 15) {
+            numRandom = Math.floor(Math.random() * 64);
+            if (selected.includes(numRandom)) {
+                continue;
             }
+            length = selected.push(numRandom);
+            console.log(selected);
             $('.square').eq(numRandom).addClass('redWannaBe');
+            console.log(selected.length);
+            length++;
         }
-
     }
-
-
-
-
-
-
-
-
 });
