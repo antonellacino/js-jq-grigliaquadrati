@@ -1,6 +1,8 @@
 $(document).ready(function() {
     var square = '<div class="square"></div>';
     var numRandom;
+    var red = 0,
+        green = 0;
 
     //ciclo x creazione griglia
     for (i = 0; i < 64; i++) {
@@ -8,6 +10,31 @@ $(document).ready(function() {
     }
 
     generateBombs();
+
+    // seleziono il quadratino e lo clicco
+    $('.square').click(
+        function() {
+            //se il quadratino selezionato ha già la classe active, quindi già selezionato
+            if ($(this).hasClass('active')) {
+                alert('Ops! Hai già cliccato!')
+            }
+            //eseguo il controllo se ha la classe rosso
+            if ($(this).hasClass('redWannaBe')) {
+                $(this).css('background', 'red');
+                $(this).addClass('active');
+                red++;
+                $('p.red').html('Numero quadratini rossi:' + red);
+            } else {
+                $(this).css('background', 'green');
+                $(this).addClass('active');
+                green++;
+                $('p.green').html('Numero quadratini verdi:' + green);
+            }
+        });
+
+
+
+
 
     //fuzione x la generazione delle bombe
     function generateBombs() {
