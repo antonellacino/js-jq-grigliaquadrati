@@ -1,0 +1,98 @@
+    /*Classi generiche-----------------------------*/
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .hidden {
+        visibility: hidden;
+    }
+    
+    .opacity20 {
+        opacity: 20%;
+    }
+    
+    .no-clicks {
+        pointer-events: none;
+    }
+    /*Classi elementi----------------------------------*/
+    
+    .container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    
+    .grid {
+        width: 80%;
+        height: 500px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .square {
+        width: calc(80vw/8);
+        height: calc(70vh/8);
+        border: 1px solid #eb269f;
+    }
+    
+    .alert {
+        height: 200px;
+        width: 307px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border: 2px solid#eb269f;
+        border-radius: 3px;
+        position: absolute;
+        top: 24%;
+        left: 40%;
+        background-color: #e29ad3f5;
+    }
+    
+    div.alert span {
+        font-size: 25px;
+        color: #eb269f;
+        font-weight: bold;
+    }
+    
+    .btn {
+        height: 50px;
+        width: 80px;
+        border: 2px solid #eb269f;
+        border-radius: 3px;
+        color: #eb269f;
+    }
+    
+    .btn:hover {
+        cursor: pointer;
+        background-color: #eb269f;
+        color: white;
+    }
+    
+    p {
+        font-size: 20px;
+        color: #eb269f;
+        font-weight: bold;
+    }
+    
+    .backgroudBombs {
+        background-image: url('./bomba.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .backgroudFlowers {
+        background-image: url('./flower.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
